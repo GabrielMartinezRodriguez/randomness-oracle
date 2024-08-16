@@ -1,0 +1,19 @@
+{
+  "name": "randomness-oracle-listener",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc --incremental",
+    "start": "node build/index.js"
+  },
+  "dependencies": {
+    "cron": "^3.1.6",
+    "dotenv": "^16.0.3",
+    "viem": "^2.17.11"
+  },
+  "devDependencies": {
+    "@types/node": "^22.3.0",
+    "typescript": "^5.5.4"
+  }
+}

@@ -1,0 +1,163 @@
+export const sequencerRandomOracleABI = [
+  { type: "constructor", inputs: [], stateMutability: "nonpayable" },
+  {
+    type: "function",
+    name: "PRECOMMIT_DELAY",
+    inputs: [],
+    outputs: [{ name: "", type: "uint256", internalType: "uint256" }],
+    stateMutability: "view",
+  },
+  {
+    type: "function",
+    name: "SEQUENCER_TIMEOUT",
+    inputs: [],
+    outputs: [{ name: "", type: "uint256", internalType: "uint256" }],
+    stateMutability: "view",
+  },
+  {
+    type: "function",
+    name: "commitments",
+    inputs: [{ name: "", type: "uint256", internalType: "uint256" }],
+    outputs: [
+      { name: "commitment", type: "bytes32", internalType: "bytes32" },
+      { name: "value", type: "bytes32", internalType: "bytes32" },
+    ],
+    stateMutability: "view",
+  },
+  {
+    type: "function",
+    name: "getSequencerRandom",
+    inputs: [{ name: "timestamp", type: "uint256", internalType: "uint256" }],
+    outputs: [{ name: "", type: "bytes32", internalType: "bytes32" }],
+    stateMutability: "view",
+  },
+  {
+    type: "function",
+    name: "isSequencerRandomStillPossible",
+    inputs: [{ name: "timestamp", type: "uint256", internalType: "uint256" }],
+    outputs: [{ name: "", type: "bool", internalType: "bool" }],
+    stateMutability: "view",
+  },
+  {
+    type: "function",
+    name: "lastRevealedTimestamp",
+    inputs: [],
+    outputs: [{ name: "", type: "uint256", internalType: "uint256" }],
+    stateMutability: "view",
+  },
+  {
+    type: "function",
+    name: "owner",
+    inputs: [],
+    outputs: [{ name: "", type: "address", internalType: "address" }],
+    stateMutability: "view",
+  },
+  {
+    type: "function",
+    name: "postCommitment",
+    inputs: [
+      { name: "timestamp", type: "uint256", internalType: "uint256" },
+      { name: "commitment", type: "bytes32", internalType: "bytes32" },
+    ],
+    outputs: [],
+    stateMutability: "nonpayable",
+  },
+  {
+    type: "function",
+    name: "renounceOwnership",
+    inputs: [],
+    outputs: [],
+    stateMutability: "nonpayable",
+  },
+  {
+    type: "function",
+    name: "revealValue",
+    inputs: [
+      { name: "timestamp", type: "uint256", internalType: "uint256" },
+      { name: "value", type: "bytes32", internalType: "bytes32" },
+    ],
+    outputs: [],
+    stateMutability: "nonpayable",
+  },
+  {
+    type: "function",
+    name: "transferOwnership",
+    inputs: [{ name: "newOwner", type: "address", internalType: "address" }],
+    outputs: [],
+    stateMutability: "nonpayable",
+  },
+  {
+    type: "function",
+    name: "unsafeGetSequencerRandom",
+    inputs: [{ name: "timestamp", type: "uint256", internalType: "uint256" }],
+    outputs: [{ name: "", type: "bytes32", internalType: "bytes32" }],
+    stateMutability: "view",
+  },
+  {
+    type: "event",
+    name: "CommitmentPosted",
+    inputs: [
+      {
+        name: "timestamp",
+        type: "uint256",
+        indexed: true,
+        internalType: "uint256",
+      },
+      {
+        name: "commitment",
+        type: "bytes32",
+        indexed: false,
+        internalType: "bytes32",
+      },
+    ],
+    anonymous: false,
+  },
+  {
+    type: "event",
+    name: "OwnershipTransferred",
+    inputs: [
+      {
+        name: "previousOwner",
+        type: "address",
+        indexed: true,
+        internalType: "address",
+      },
+      {
+        name: "newOwner",
+        type: "address",
+        indexed: true,
+        internalType: "address",
+      },
+    ],
+    anonymous: false,
+  },
+  {
+    type: "event",
+    name: "ValueRevealed",
+    inputs: [
+      {
+        name: "timestamp",
+        type: "uint256",
+        indexed: true,
+        internalType: "uint256",
+      },
+      {
+        name: "value",
+        type: "bytes32",
+        indexed: false,
+        internalType: "bytes32",
+      },
+    ],
+    anonymous: false,
+  },
+  {
+    type: "error",
+    name: "OwnableInvalidOwner",
+    inputs: [{ name: "owner", type: "address", internalType: "address" }],
+  },
+  {
+    type: "error",
+    name: "OwnableUnauthorizedAccount",
+    inputs: [{ name: "account", type: "address", internalType: "address" }],
+  },
+] as const;
