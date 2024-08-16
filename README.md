@@ -1,4 +1,4 @@
-# QUICK START
+# QUICK START
 
 To start the Anvil blockchain and the backend, you should execute:
 
